@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Contato </title>
 
     <script>
 
         function valida(){
         
-            if(document.contato.nome.value==""){
-                alert("Campo Vazio digite algo");
-                document.contato.focus();
-            }
-            
-               if(document.contato.email.value==""){
-                alert("Campo Vazio digite algo");
-                document.email.focus();
+        if(document.contato.nome.value=="" || document.contato.nome.value.length < 6)
+            {
+                alert( "Preencha campo Nome Completo corretamente!" );
+                document.contato.nome.focus();
             }
 
-               if(document.contato.zap.value==""){
-                alert("Campo Vazio digite algo");
-                document.zap.focus();
+
+              if(document.contato.email.value=="" || document.contato.email.value.length < 5)
+            {
+                alert( "Preencha campo E-mail corretamente!" );
+                document.contato.email.focus();
             }
+
+            
+              if(document.contato.zap.value=="" || document.contato.zap.value.length < 11)
+            {
+                alert( "Preencha campo Wahs-app ( ex .. 51 - 98165476970 corretamente!" );
+                document.contato.zap.focus();
+            }
+            
+          
+                if(document.contato.assunto.value=="" || document.contato.assunto.value.length < 5 )
+            {
+                alert( "Preencha campo Assunto corretamente!" );
+                document.contato.assunto.focus();
+            }
+
+
+
 
 
         }
@@ -46,7 +61,7 @@
 <label><h2>Data de Nascimento</h2></label>
 <input type="date" name="nascimento" size="30" required>
 <label><h2>Assunto</h2></label>
-<textarea name=""Assunto" rows="3" cols="30"></textarea>
+<textarea name="assunto" rows="3" cols="30"></textarea>
 <br>
 <input type="submit" value="Enviar" onclick="valida()">
 </legend>
