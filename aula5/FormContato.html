@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function valida(){
+        
+            if(document.contato.nome.value==""){
+                alert("Campo Vazio digite algo");
+                document.contato.focus();
+            }
+            
+               if(document.contato.email.value==""){
+                alert("Campo Vazio digite algo");
+                document.email.focus();
+            }
+
+               if(document.contato.zap.value==""){
+                alert("Campo Vazio digite algo");
+                document.zap.focus();
+            }
+
+
+        }
+
+    </script>
+
+</head>
+<body bgcolor="black">
+<font color="white">
+
+ <center>   
+<h1>Formulario de Contato </h1>
+<form name="contato" method="post" action="dispara.php">
+<legend>
+<label><h2>Nome Completo</h2></label>
+<input type="text" name="nome" size="30" required> 
+<label><h2>E-mail</h2></label>
+<input type="email"name="email" size="30" required>
+<label><h2>Whats app</h2></label>
+<input type="text" name="zap" size="30" required>
+<label><h2>Data de Nascimento</h2></label>
+<input type="date" name="nascimento" size="30" required>
+<label><h2>Assunto</h2></label>
+<textarea name=""Assunto" rows="3" cols="30"></textarea>
+<br>
+<input type="submit" value="Enviar" onclick="valida()">
+</legend>
+</form>
+</center>
+</font>    
+   
+</body>
+</html>
