@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato </title>
+
+    <script>
+
+        function valida(){
+        
+        if(document.contato.nome.value=="" || document.contato.nome.value.length < 6)
+            {
+                alert( "Preencha campo Nome Completo corretamente!" );
+                document.contato.nome.focus();
+            }
+
+
+              if(document.contato.email.value=="" || document.contato.email.value.length < 5)
+            {
+                alert( "Preencha campo E-mail corretamente!" );
+                document.contato.email.focus();
+            }
+
+            
+              if(document.contato.zap.value=="" || document.contato.zap.value.length < 11)
+            {
+                alert( "Preencha campo Wahs-app ( ex .. 51 - 98165476970 corretamente!" );
+                document.contato.zap.focus();
+            }
+            
+          
+                if(document.contato.assunto.value=="" || document.contato.assunto.value.length < 5 )
+            {
+                alert( "Preencha campo Assunto corretamente!" );
+                document.contato.assunto.focus();
+            }
+
+
+
+
+
+        }
+
+    </script>
+
+</head>
+<body bgcolor="black">
+<font color="white">
+
+ <center>   
+<h1>Formulario de Contato </h1>
+<form name="contato" method="get" action="recebe.html">
+<legend>
+<label><h2>Nome Completo</h2></label>
+<input type="text" name="nome" size="30" required> 
+<label><h2>E-mail</h2></label>
+<input type="email"name="email" size="30" required>
+<label><h2>Whats app</h2></label>
+<input type="text" name="zap" size="30" required>
+<label><h2>Data de Nascimento</h2></label>
+<input type="date" name="nascimento" size="30" required>
+<label><h2>Assunto</h2></label>
+<textarea name="assunto" rows="3" cols="30"></textarea>
+<br>
+<input type="submit" value="Enviar" onclick="valida()">
+</legend>
+</form>
+</center>
+</font>    
+   
+</body>
+</html>
