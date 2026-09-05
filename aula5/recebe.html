@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contato </title>
+</head>
+<body bgcolor="black">
+    
+<script>
+var urlAtual = window.location.href;
+var urlClass = new URL(urlAtual);
+var nome = urlClass.searchParams.get("nome");
+var email = urlClass.searchParams.get("email");
+var zap = urlClass.searchParams.get("zap");
+var nascimento = urlClass.searchParams.get("nascimento");
+var assunto = urlClass.searchParams.get("assunto");
+
+alert(   "Nome Completo : " +nome + "\n" 
+         +"Email :        " +email+ "\n"
+         +"zap :        "   +zap+ "\n"
+         +"nascimento : "   +nascimento+ "\n"
+         +"zap :        "   +zap+ "\n"
+         +"assunto :        "   +assunto+ "\n"
+);
+var assunto = urlClass.searchParams.get("assunto");
+</script>
+
+<script>
+document.write("<h2>");
+document.write("<font color='white'>");
+document.write("Nome Completo : ");
+document.write(nome);
+document.write("<br>");
+
+
+document.write("Email : ");
+document.write(email);
+document.write("<br>");
+
+document.write("Whats app : ");
+document.write(zap);
+document.write("<br>");
+
+
+document.write("Data de Nascimento : ");
+document.write(nascimento);
+document.write("<br>");
+
+document.write("Assunto : ");
+document.write(assunto);
+document.write("<br>");
+document.write("</font>");
+
+</script>
+
+</body>
+</html>
