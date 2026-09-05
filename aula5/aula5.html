@@ -1,69 +1,532 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Contato </title>
-    <script>
-
-        function valida(){
-        
-        if(document.contato.nome.value=="" || document.contato.nome.value.length < 6)
-            {
-                alert( "Preencha campo Nome Completo corretamente!" );
-                document.contato.nome.focus();
-            }
-
-
-              if(document.contato.email.value=="" || document.contato.email.value.length < 5)
-            {
-                alert( "Preencha campo E-mail corretamente!" );
-                document.contato.email.focus();
-            }
-
-            
-              if(document.contato.zap.value=="" || document.contato.zap.value.length < 11)
-            {
-                alert( "Preencha campo Wahs-app ( ex .. 51 - 98165476970 corretamente!" );
-                document.contato.zap.focus();
-            }
-            
-          
-                if(document.contato.assunto.value=="" || document.contato.assunto.value.length < 5 )
-            {
-                alert( "Preencha campo Assunto corretamente!" );
-                document.contato.assunto.focus();
-           }
-
-
-        }
-
-    </script>
-
+<title>Aula 5  </title>
 </head>
-<body bgcolor="black">
-<font color="white">
+<body bgcolor="white">
+<CENTER>
+<div>
+  <img src="../img/logo.png">
+</div>
 
- <center>   
-<h1>Formulario de Contato </h1>
-<form name="contato" method="get" action="recebe.html">
-<legend>
-<label><h2>Nome Completo</h2></label>
-<input type="text" name="nome" size="30" required> 
-<label><h2>E-mail</h2></label>
-<input type="email"name="email" size="30" required>
-<label><h2>Whats app</h2></label>
-<input type="text" name="zap" size="30" required>
-<label><h2>Data de Nascimento</h2></label>
-<input type="date" name="nascimento" size="30" required>
-<label><h2>Assunto</h2></label>
-<textarea name="assunto" rows="3" cols="30"></textarea>
+<font color="white">
+<h2>Linguagem Web</h2>
+<h3>Aula 5 </h3>
+</font>
+<h3>
+
+    
+<!--  Formularios -->
+<br> 
+<font color="red">       
+<h3>
+Formulários</h3>
+</font>
+<font color="black">
+<h4>
+    <p>A linguagem HTML permite que o cliente (navegador) interaja com o servidor,<br>
+    preenchendo campos, clicando em botões e passando informações.</p>
+
+    <p>O elemento “form”, da linguagem HTML, é justamente o responsável por tal interação.<br>
+Ele provê uma maneira agradável e familiar para coletar dados do usuário através da<br>
+criação de formulários com janelas de entrada de textos, botões, etc.</p>
+</h4>
+</font>
+
 <br>
-<input type="submit" value="Enviar" onclick="valida()">
-</legend>
-</form>
-</center>
-</font>    
+<!--  formularios FIM -->
+
+
+
+
+
+
+  
+<!--  Construindo Formularios -->
+<br> 
+<font color="red">       
+<h3>
+Construindo Formulários</h3>
+</font>
+<font color="black">
+<h4>
+    <p> Para a construção de um formulário, todos os elementos que serão apresentados nos<br>
+        tópicos abaixo deverão ficar dentro das TAGs <form> </form>.</p> 
+
+        <textarea rows="2" cols="50">
+        <form> </form>
+        </textarea>
+
+    <p>Dentro da TAG “form” deve ser inserido o atributo “method”, que é responsável por<br>
+    definir a forma como os dados serão enviados após salvar um formulário. Ele pode<br>
+    assumir um dos dois valores abaixo: </p>
+
+            <p> GET – Envia os dados adicionados aos campos do formulário associados à <br>
+            URL da página, suportando até 128 caracteres.</p>
+            <p><B>POST </B> – É o mais utilizado, pois envia cada dado de forma separada da URL.<br>
+            Com este método, as informações adicionadas aos campos fazem parte do<br>
+            corpo da mensagem enviada para o servidor e transfere grande quantidade de<br>
+            dados.</p>
+
+</h4>
+</font>
+<textarea rows="2" cols="50">
+<form> </form>
+</textarea>
+<br>
+<!--  Construindo Formularios FIM -->
+
+ 
+<!--  A TAG <input> -->
+<br> 
+<font color="red">       
+<h3>
+A TAG input</h3>
+</font>
+<font color="black">
+<h4>
+           <p> A TAG input especifica uma variedade de campos editáveis dentro de um<br>
+                formulário, podendo receber diversos atributos que definem o tipo de mecanismo de<br>
+                entrada (botões, caixas de texto, etc.), o nome do campo, o alinhamento e o campo<br>
+                do valor mostrado.</p> 
+
+            <p>Um dos atributos mais importantes do “input” é o “name”. Ele associa o valor da<br>
+                entrada do elemento a um nome, para que este possa ser usado pela linguagem de<br>
+                programação do lado do servidor.</p>
+            <p>Outro atributo importante é o “type”, que determina o tipo de campo de entradas de<br>
+            dados. Por exemplo:</p><br>
+
+       
+            <textarea rows="2" cols="50">
+            <input type="text" name="txtNome" />
+            </textarea>
+            <br>
+
+                <P>Para mudar o comprimento do campo, pode ser utilizado o atributo “size”, conforme<br>
+                abaixo:</P>
+                     
+              
+            <textarea rows="3" cols="70">
+         <input type="text" name="txtNome" size="10" />
+            <!-- 10 é um exemplo, podendo ser substituído pelo valor desejado -->
+            </textarea>
+            <br>
+
+                <p>Já o atributo “value” adiciona ao campo um valor de preenchimento:</p>
+
+                    </h4>
+                </font>
+            <textarea rows="3" cols="90">
+            <input type="text" name="txtNome" size="10" value="Exemplo de conteúdo" />
+            </textarea>
+            <br>
+
+
+<!--  A TAG <fim> -->
+
+
+
+
    
-</body>
-</html>
+<!--  Elemento text -->
+<br> 
+<font color="red">       
+<h3>
+ Elemento text</h3>
+</font>
+<font color="black">
+<h4>
+
+            <p>Conforme mostrado nos exemplos do tópico anterior, o type=”text” consiste em um<br>
+            campo de texto comum, para a entrada de dados por parte do usuário.</p>
+
+</h4>
+</font>
+<textarea rows="2" cols="50">
+<input type="text" value="Exemplo de Resultado">
+</textarea>
+<br>
+<!--  Elemento text FIM -->
+
+
+
+
+
+   
+<!--  Elemento password -->
+<br> 
+<font color="red">       
+<h3>
+  Elemento password</h3>
+</font>
+<font color="black">
+<h4>
+
+           <p>Esse elemento tem funcionamento semelhante ao anterior, com o diferencial de<br>
+            ocultar da tela o que é digitado nele, evitando assim que campos sigilosos como<br>
+            senhas, sejam exibidos. Por exemplo:</p>
+
+</h4>
+</font>
+<textarea rows="2" cols="70">
+<input type="password" name="txtSenha" size="50" value="" />
+</textarea>
+<br>
+<!--   Elemento password FIM -->
+
+
+
+
+<!-- Elemento radio -->
+<br> 
+<font color="red">       
+<h3>
+  Elemento radio</h3>
+</font>
+<font color="black">
+<h4>
+
+            <p>Quando o usuário deve escolher uma única alternativa em um conjunto de várias<br>
+            opções, utiliza-se o radio button.  </p>
+
+            <p>Exemplos típicos do uso desse botão é um campo que deve ter como resposta “Sim”<br>
+            ou “Não”; e um campo para a seleção do sexo, que aceitaria “Masculino” ou<br>
+            “Feminino”.</p>  
+            
+            <p>Uma característica importante desse campo é a necessidade de todos os radios<br>
+            buttons de um mesmo grupo, ou seja, referentes à mesma pergunta, terem o mesmo<br>
+            atributo “name”. Também é necessário informar um valor para o atributo “value”, e<br>
+            um identificador único para o atributo “id”, conforme o exemplo abaixo:<br>
+            </p>
+
+
+
+
+<textarea rows="2" cols="90">
+<input type="radio" id="rdbSexoMasculino" name="rdbSexo" value="M"> Masculino
+<input type="radio" id="rdbSexoFeminino" name="rdbSexo" value="F"> Feminino
+</textarea>
+<br>
+
+
+<p>Para que um dos valores já venha selecionado basta utilizar o atributo<br>
+checked="checked", como abaixo, onde o item “Feminino” virá preenchido:<br>
+</p>
+
+</h4>
+</font>
+<textarea rows="3" cols="90">
+<input type="radio" id="rdbSexoMasculino" name="rdbSexo" value="M"> Masculino
+<input type="radio" id="rdbSexoFeminino" name="rdbSexo" checked="checked" value="F"> Feminino
+
+</textarea>
+<br>
+<!--   2.9.2.3 Elemento radio  FIM -->
+
+
+
+
+
+<!--  Elemento checkbox -->
+<br> 
+<font color="red">       
+<h3>
+ Elemento checkbox</h3>
+</font>
+<font color="black">
+<h4>
+
+          <p>Diferente do radio button, o checkbox permite que mais de uma opção seja escolhida<br>
+             como resposta para o campo.</p><br>
+
+             <p>Lembrando que assim como o radio button, o elemento checkbox necessita que os<br>
+                itens integrantes de um mesmo grupo tenham o mesmo atributo “name”. </p><br>
+
+</h4>
+</font>
+<textarea rows="13" cols="80">
+<input type="checkbox" id="chkLinguagemHTML" name="chkLinguagens" />
+HTML
+<input type="checkbox" id="chkLinguagemCSS" name="chkLinguagens" />
+CSS
+<input type="checkbox" id="chkLinguagemJavaScript" name="chkLinguagens" />
+JavaScript
+<input type="checkbox" id="chkLinguagemAspNet" name="chkLinguagens" />
+ASP.NET
+<input type="checkbox" id="chkLinguagemAspNetMVC" name="chkLinguagens" />
+ASP.NET MVC
+<input type="checkbox" id="chkLinguagemPHP" name="chkLinguagens" />
+PHP
+</textarea>
+<br>
+
+<p>Para trazer itens selecionados basta apenas também utilizar o checked="checked", <br>
+como no tópico anterior.</p>
+
+</h4>
+</font>
+<!--   Elemento checkbox FIM -->
+
+
+
+<!--   Elemento submit -->
+<br> 
+<font color="red">       
+<h3>
+  Elemento submit</h3>
+</font>
+<font color="black">
+<h4>
+
+        <p>O “submit” é um botão, e sua função é submeter os dados do formulário para o script<br>
+        que os tratará. Exemplo:
+        </p>           
+
+</h4>
+</font>
+<textarea rows="2" cols="70">
+<input type="submit" id="btnSalvar" name="btnSalvar" value="Salvar" />
+</textarea>
+<br>
+<!--    Elemento submit FIm -->
+
+
+
+<!--   Elemento reset -->
+<br> 
+<font color="red">       
+<h3>
+  Elemento reset</h3>
+</font>
+<font color="black">
+<h4>
+            <p>
+                Já o reset tem a função de limpar todos os campos do formulário. Exemplo
+            </p>
+
+</h4>
+</font>
+<textarea rows="2" cols="70">
+<input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar" />
+</textarea>
+<br>
+<!--    Elemento reset FIm -->
+
+
+
+<!--    TAG <textarea>-->
+<br> 
+<font color="red">       
+<h3>
+  TAG textarea</h3>
+</font>
+<font color="black">
+<h4>
+            <p>
+                Trata-se de um campo para entrada de texto, que permite várias linhas de conteúdo.
+            </p>
+
+            <p> Para definir o tamanho do campo mostrado na tela, usa-se os atributos “cols” e<br>
+                “rows”, que especificam, respectivamente, o número de colunas e linhas que se<br>
+                deseja mostrar para o usuário </p>
+
+            <p>O atributo não é aceito neste elemento, mas é possível iniciar o elemento já com um <br>
+                texto preenchido, inserindo entre as TAGs de abertura de fechamento do “textarea”, <br>
+                conforme o exemplo abaixo:</p>    
+
+</h4>
+</font>
+<textarea rows="3" cols="90">
+<textarea id="txtObservacoes" name="txtObservacoes" cols="50" rows="5">Exemplo de
+conteúdo</textarea>
+</textarea>
+<br>
+<!--     TAG textarea FIm -->
+
+
+<!--  A TAG <select> -->
+<br> 
+<font color="red">       
+<h3>
+  A TAG select</h3>
+</font>
+<font color="black">
+<h4>
+            <p>
+                A TAG select permite definir uma lista de opções, com barra de rolagem ou fixa na<br>
+                tela do navegador, para que o usuário selecione um item.
+            </p>
+
+             <p>Dentro da TAG select devem ser inseridas as TAGs option, que são os itens da<br>
+              lista, e dentro destas devem ser inseridos os atributos “value”, que servem para<br>
+              denotar o valor do item selecionado.</p><br>
+
+
+
+</h4>
+</font>
+<textarea rows="10" cols="70">
+<select id="cmbLinguagens" name="cmbLinguagens">
+ <option value=""></option>
+ <option value="1">HTML</option>
+ <option value="2">CSS</option>
+ <option value="3">JavaScript</option>
+ <option value="4">ASP.NET</option>
+ <option value="5">ASP.NET MVC</option>
+ <option value="6">PHP</option>
+</select>
+</textarea>
+<br>
+<p>Dessa forma o campo vem fechado, e é aberto para a seleção quando o usuário clicar,<br>
+no mesmo. Para que ele venha aberto por padrão, utiliza-se o atributo<br>
+multiple="multiple" na TAG select, conforme mostrado abaixo:<br>
+</p>
+</h4>
+</font>
+<textarea rows="11" cols="70">
+<select id="cmbLinguagens" name="cmbLinguagens" multiple="multiple">
+ <option value=""></option>
+ <option value="1">HTML</option>
+ <option value="2">CSS</option>
+ <option value="3">JavaScript</option>
+ <option value="4">ASP.NET</option>
+ <option value="5">ASP.NET MVC</option>
+ <option value="6">PHP</option>
+</select>
+</textarea>
+<br>
+<p>Já para que um dos itens venha selecionado ao abrir a página, utiliza-se o atributo<br>
+selected="selected" na TAG option. Exemplo:</p>
+
+<textarea rows="11" cols="70">
+<select id="cmbLinguagens" name="cmbLinguagens">
+ <option value=""></option>
+ <option value="1">HTML</option>
+ <option value="2">CSS</option>
+ <option value="3">JavaScript</option>
+ <option value="4" selected="selected">ASP.NET</option>
+ <option value="5">ASP.NET MVC</option>
+ <option value="6">PHP</option>
+</select>
+</textarea>
+<!--   A TAG <select> FIm -->
+
+
+
+  
+<!--    Exemplo de formulário completo -->
+<br> 
+<font color="red">       
+<h3>
+   Exemplo de formulário completo</h3>
+</font>
+<font color="black">
+<h4>
+            <p>
+                Abaixo é apresentado um modelo de formulário completo, utilizando os campos,<br>
+                apresentados nos tópicos acima e organizados dentro de uma tabela para que fiquem<br>
+                alinhados.
+            </p>
+
+            <p>
+                Também é interessante observar que os campos de radio e checkbox, foram<br>
+                colocados dentro de TAGs label  /label, isso serve para que o texto que<br>
+                acompanha o campo radio ou checkbox possa ser usado para clicar e selecionar o<br>
+                item. 
+            </p>
+
+</h4>
+</font>
+<textarea rows="90" cols="100">
+<form name="frmExemplo" method="post">
+ <table>
+ <tr>
+ <td>Nome: </td>
+ <td>
+ <input type="text" id="txtNome" name="txtNome" size="50" value="" />
+ </td>
+ </tr>
+ <tr>
+ <td>Endereço: </td>
+ <td>
+ <input type="text" id="txtEndereco" name="txtEndereco" size="50"
+value="" />
+ </td>
+ </tr>
+ <tr>
+ <td>Cidade:</td>
+ <td>
+ <select id="cmbCidade" name="cmbCidade">
+ <option value=""></option>
+ <option value="">Adamantina</option>
+ <option value="">Bastos</option>
+ <option value="">Dracena</option>
+ <option value="">Flórida Paulista</option>
+ <option value="">Inúbia Paulista</option>
+ <option value="">Junquirópolis</option>
+ <option value="">Lucélia</option>
+ <option value="">Osvaldo Cruz</option>
+ <option value="">Pacaembu</option>
+ <option value="">Parapuã</option>
+ <option value="">Tupã</option>
+ </select>
+ </td>
+ </tr>
+25
+ <tr>
+ <td>Sexo: </td>
+ <td>
+ <label>
+ <input type="radio" id="rdbSexoMasculino" name="rdbSexo" value="M" />
+ Masculino
+ </label>
+ <label>
+ <input type="radio" id="rdbSexoFeminino" name="rdbSexo"
+checked="checked" value="F" />
+ Feminino
+ </label>
+ </td>
+ </tr>
+ <tr>
+ <td>Linguagens dominadas:</td>
+ <td>
+ <label>
+ <input type="checkbox" id="chkLinguagemHTML" name="chkLinguagens" />
+ HTML
+ </label>
+ <label>
+ <input type="checkbox" id="chkLinguagemCSS" name="chkLinguagens" />
+ CSS
+ </label>
+ <label>
+ <input type="checkbox" id="chkLinguagemJavaScript"
+name="chkLinguagens" />
+ JavaScript
+ </label>
+ <label>
+ <input type="checkbox" id="chkLinguagemAspNet"
+name="chkLinguagens" />
+ ASP.NET
+ </label>
+ <label>
+ <input type="checkbox" id="chkLinguagemAspNetMVC"
+name="chkLinguagens" />
+ ASP.NET MVC
+ </label>
+ <label>
+ <input type="checkbox" id="chkLinguagemPHP" name="chkLinguagens" />
+ PHP
+ </label>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="2" align="center">
+ <input type="submit" id="btnSalvar" name="btnSalvar" value="Salvar" />
+ <input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar" />
+ </td>
+ </tr>
+ </table>
+</form>
+</textarea>
+<br>
+<!--    Formulario Completo FIm -->
